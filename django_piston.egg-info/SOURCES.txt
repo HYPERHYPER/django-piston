@@ -1,4 +1,5 @@
 MANIFEST.in
+setup.cfg
 setup.py
 django_piston.egg-info/PKG-INFO
 django_piston.egg-info/SOURCES.txt

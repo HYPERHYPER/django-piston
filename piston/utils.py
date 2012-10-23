@@ -62,11 +62,10 @@ class rc_factory(object):
                 HttpResponse.content although this bug report (feature request)
                 suggests that it should: http://code.djangoproject.com/ticket/9403 
                 """
+                self._container = content
                 if not isinstance(content, basestring) and hasattr(content, '__iter__'):
-                    self._container = content
                     self._is_string = False
                 else:
-                    self._container = [content]
                     self._is_string = True
 
             content = property(HttpResponse._get_content, _set_content)            
